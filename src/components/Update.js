@@ -36,10 +36,13 @@ export default function Update(props) {
     })
       .then((res) => res.json())
       .then((data) => {
+        // Update the state with the new data
+        setNewData(data);
         props.setOpen(true);
       })
       .catch((error) => console.log(error));
   };
+  
 
   return (
     <>
